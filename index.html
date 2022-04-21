@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+       
+        <iframe src="http://staging.hover.to/design-studio/guest" height="1000" width="1000">Cannot Be Displayed</iframe>
+        <script>
+            window.addEventListener('load', () => {
+                console.log("loaded");
+                CoveoInProduct.setContext({"currentSlide":"baseModel"});
+            })
+            
+            window.onmessage = (event) => {
+                if (event.data) {
+                          console.log("source: " + event.source.document.location.href);
+                           let receivedData = event.data;
+                        console.log("top level receivedData: " + receivedData);
+                }
+              };
+            </script>
+    </body>
+</html>
